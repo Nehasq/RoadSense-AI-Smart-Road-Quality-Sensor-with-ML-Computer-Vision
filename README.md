@@ -11,7 +11,8 @@ This repository contains links, descriptions, and documentation for three image 
 Due to GitHub file size limitations, the public dataset can be downloaded using the link below, and the other variations of the dataset were created by applying the data augmentation techniques mentioned below.
 
 ### Dataset 1: Roboflow Dataset
-- **Description:** contains 665 pothole images, with variations in illumination, background noise, shadows, water-filled potholes, and moving vehicles. A comprehensive analysis was conducted, all objects in the dataset 
+
+**Description:** contains 665 pothole images, with variations in illumination, background noise, shadows, water-filled potholes, and moving vehicles. A comprehensive analysis was conducted, all objects in the dataset 
 are marked with bounding boxes and labelled as potholes, meaning that no negative training examples or images without potholes are included. The dataset was sourced from Roboflow, which, in turn, was originally sourced 
 from Kaggle (Chitholian, 2020) under the “ODbL v1.0” license. The original Kaggle version didn’t have a validation set, so the Roboflow platform reshuffled the data and created a validation set, which was then downloaded 
 in YOLO format.
@@ -19,10 +20,11 @@ in YOLO format.
 The dataset was divided into training, validation, and test sets to prevent overfitting and accurately evaluate the model. The dataset was split in a 70:20:10 ratio, a commonly used ratio among researchers, with 70% for 
 training, 20% for validation, and 10% for testing. This distribution resulted in a training dataset comprising 465 images, a validation set containing 133 images, and a testing dataset consisting of 67 images.
 
-- **Download link:** https://universe.roboflow.com/brad-dwyer/pothole-voxrl/dataset/1
+**Download link:** https://universe.roboflow.com/brad-dwyer/pothole-voxrl/dataset/1
 
 ### Dataset 2: Augmented Roboflow Dataset
-- **Description:** The original dataset consisted of 465 training images, 133 validation images, and 67 test images. Various augmentations were applied using the Roboflow platform. Special care was taken when uploading the 
+
+**Description:** The original dataset consisted of 465 training images, 133 validation images, and 67 test images. Various augmentations were applied using the Roboflow platform. Special care was taken when uploading the 
 dataset by selecting the option to "keep the original split" to maintain the integrity of the data distribution across training, validation, and test sets. The dataset was pre-processed by auto-orienting and resizing the 
 images to 640x640, the default image size for YOLOv8 and YOLOv10. Augmentations such as rotation, flips, and brightness adjustments were applied. Preprocessing was performed on the entire dataset, whereas data augmentations 
 were applied only to the training set. Following common practice, the validation and test sets remain unchanged. Each training sample generated three output variations, resulting in a total of 1,592 images. The dataset's final
@@ -30,7 +32,8 @@ distribution, including training(1392), validation(133), and test sets(67).
 
 
 ### Dataset 3: Custom UK Road Dataset
-- **Description:** The public dataset provided a starting point for comparing the results of our model with state-of-the-art (SOTA) models. However, our goal was to develop a pothole detection system specifically adapted to UK roads. 
+
+**Description:** The public dataset provided a starting point for comparing the results of our model with state-of-the-art (SOTA) models. However, our goal was to develop a pothole detection system specifically adapted to UK roads. 
 Since there was little to no data available for UK roads, we needed to collect our own data to create a new dataset better suited to our needs.
 
 - **Data Collection & Annotation Overview:** 
